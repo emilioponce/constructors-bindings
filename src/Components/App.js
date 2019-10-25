@@ -4,15 +4,25 @@ import UnBoundComponent from './UnboundComponent';
 import BoundComponent from './BoundComponent';
 import ArrowComponent from './ArrowComponent';
 
-// import GrandFather from './Classes/GrandFather';
-// import Father from './Classes/Father';
-// import Child from './Classes/Child';
+import GrandFather from './Classes/GrandFather';
+import Father from './Classes/Father';
+import Child from './Classes/Child';
 
 // import SideEffect from './Classes/SideEffect';
 
-// const grandFather = new GrandFather();
-// const father = new Father();
-// const child = new Child();
+import B from './testclasses/B';
+
+const b = new B();
+b.hola('Juan'); // directly invoke the father definition
+b.holaArrow('Juan'); // directly invoke the father definition
+b.holaB('Alberto'); // using super to invoke the father definition
+b.holaBArrow('Alberto'); // using super to invoke the father definition
+
+/////////////////////////////////
+
+const grandFather = new GrandFather();
+const father = new Father();
+const child = new Child();
 
 function App() {
   // printMyMiseries: Regular class method defined in GrandFather
