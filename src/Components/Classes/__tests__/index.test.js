@@ -1,6 +1,6 @@
 import GrandFather from '../GrandFather';
 
-describe('Mocking the methods in the class prototype', () => {
+describe('Mocking the 2 methods in the class prototype', () => {
   beforeEach(() => {
     jest
       .spyOn(GrandFather.prototype, 'printMyMiseries')
@@ -20,13 +20,14 @@ describe('Mocking the methods in the class prototype', () => {
     jest
       .spyOn(GrandFather.prototype, 'printMySkills')
       .mockImplementation(() => 'My mocked skills');
-    // Error!! Cannot spy the printMySkills property because it is not a function; undefined given instead
+    // Error!! Cannot spy the printMySkills property because it is not
+    // a function; undefined given instead
     const grandFather = new GrandFather();
     expect(grandFather.printMySkills()).toBe('My mocked skills');
   });
 });
 
-describe('Mocking the methods in a specific instance', () => {
+describe('Mocking the 2 methods in a specific instance', () => {
   const grandFather = new GrandFather();
   beforeEach(() => {
     jest

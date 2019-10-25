@@ -3,12 +3,12 @@ import React, { PureComponent } from 'react';
 class UnBoundComponent extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = { active: true };
   }
 
   handleClick() {
-    // 'this' is undefined !!
-    console.log('It is active? ', this.state.active);
+    // SPOILER: 'this' is undefined !!
+    console.log('active? ', this.state.active);
   }
 
   render() {
@@ -18,6 +18,7 @@ class UnBoundComponent extends PureComponent {
           background: 'orange',
           width: '200px',
           margin: '20px',
+          padding: '10px',
           fontSize: '20px',
         }}
       >

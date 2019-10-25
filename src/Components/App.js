@@ -1,20 +1,21 @@
 import React from 'react';
 
-// import GrandFather from './Classes/GrandFather';
-// import Father from './Classes/Father';
-// import Child from './Classes/Child';
-
 import UnBoundComponent from './UnboundComponent';
 import BoundComponent from './BoundComponent';
 import ArrowComponent from './ArrowComponent';
 
+// import GrandFather from './Classes/GrandFather';
+// import Father from './Classes/Father';
+// import Child from './Classes/Child';
+
 // import SideEffect from './Classes/SideEffect';
+
 // const grandFather = new GrandFather();
 // const father = new Father();
 // const child = new Child();
 
 function App() {
-  // printMyMiseries: Regular Function defined in GrandFather
+  // printMyMiseries: Regular class method defined in GrandFather
   // grandFather.printMyMiseries();
   // father.printMyMiseries();
   // child.printMyMiseries();

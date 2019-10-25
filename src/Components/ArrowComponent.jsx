@@ -3,11 +3,14 @@ import React, { PureComponent } from 'react';
 class ArrowComponent extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = { active: true };
   }
 
   handleClick = () => {
-    console.log('It is active? ', this.state.active);
+    // 'this' has value.
+    // Arrow functions have no execution context, so they do not have 'this',
+    // They look at the upper level for this, where it is defined.
+    console.log('active? ', this.state.active);
   };
 
   render() {
@@ -17,6 +20,7 @@ class ArrowComponent extends PureComponent {
           background: '#FF00FF',
           width: '200px',
           margin: '20px',
+          padding: '10px',
           fontSize: '20px',
         }}
       >
